@@ -6,7 +6,7 @@
 
 2. acloong所有代码基于C++11标准，不依赖任何第三方库。
 
-3. project structure  
+3. 项目结构
     acloong   
         |---README.md  
         |---doc  
