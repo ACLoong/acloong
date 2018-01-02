@@ -3,5 +3,5 @@ project(acloong)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES src/main.cpp)
 add_executable(acloong ${SOURCE_FILES})
