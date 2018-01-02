@@ -7,12 +7,13 @@
 2. acloong所有代码基于C++11标准，不依赖任何第三方库。
 
 3. project structure  
-    acloong
+    acloong   
         |---README.md  
         |---doc  
-        |---src   
+        |---src        
 
-        |---sample  
+        |---sample     
+
         |---test    
 
 4. 待实现的内容
@@ -27,6 +28,7 @@
     9. conf组件：提供一个kv配置文件组件。
     10. 设计模式组件：提供一系列常用的设计模式组件。
     11. io组件：包含console、file system、log等。
+    12. serialization组件：极简的序列化组件。
 
 ### 特性  
 
