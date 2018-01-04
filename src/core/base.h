@@ -6,8 +6,12 @@
 #define ACLOONG_BASE_H
 
 #include <cstdint>
+#include <list>
+#include <string>
+#include <vector>
+#include <set>
 
-namespace acloong {
+namespace acloong{
 
     using i8_t      = int8_t ;
     using i16_t     = int16_t ;
@@ -19,16 +23,24 @@ namespace acloong {
     using u32_t     = uint32_t ;
     using u64_t     = uint64_t ;
 
-    using byte      = int8_t;
-    using ubyte     = uint8_t ;
-    using f32       = float ;
-    using f64       = double;
+    using byte_t    = int8_t;
+    using ubyte_t   = uint8_t ;
+    using f32_t     = float ;
+    using f64_t     = double;
 
-    using uchar     = unsigned char ;
-    using ushort    = unsigned short ;
-    using uint      = unsigned int ;
-    using ulong     = unsigned long ;
-    using ullong    = unsigned long long ;
+    using uchar_t   = unsigned char ;
+    using ushort_t  = unsigned short ;
+    using uint_t    = unsigned int ;
+    using ulong_t   = unsigned long ;
+    using ullong_t  = unsigned long long ;
+
+    using sset_t    = std::set<std::string> ;
+    using slist_t   = std::list<std::string> ;
+    using svector_t = std::vector<std::string> ;
+
+    using iset_t    = std::set<int32_t> ;
+    using ilist_t   = std::list<int32_t > ;
+    using ivector_t = std::vector<int32_t> ;
 
     using nullptr_t = decltype(nullptr) ;
 }
