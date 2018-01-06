@@ -12,8 +12,75 @@
 
 namespace acloong {
 
+    /**
+     * @brief ACCharacter provides a character unit, it stores an utf16 character with 16 bit.
+     */
     class ACCharacter {
-        //TODO
+    public:
+        /**
+         * @brief
+         * @param character
+         */
+        explicit ACCharacter(char character = 0) ;
+
+        /**
+         * @brief
+         * @param character
+         */
+        explicit ACCharacter(const ACCharacter &character) ;
+
+        /**
+         * @brief
+         * @param character
+         */
+        explicit ACCharacter(const ACCharacter &&character) ;
+
+        /**
+         * @brief
+         */
+        ~ACCharacter() ;
+
+        /**
+         * @brief get the value in which store-unit
+         * @return the value of which store-unit in value-passed not in reference-passed
+         */
+        char operator [] ()  const ;
+
+        /**
+         * @brief
+         * @param character
+         * @return
+         */
+        ACCharacter& operator = (const ACCharacter &character) ;
+
+        /**
+         *
+         * @param character
+         * @return
+         */
+        bool operator == (const ACCharacter &character) const ;
+
+        /**
+         *
+         * @param character
+         * @return
+         */
+        bool operator != (const ACCharacter &character) const ;
+
+        /**
+         * @brief
+         * @param character
+         * @return
+         */
+        bool equals (const ACCharacter &character) const ;
+
+        /**
+         * @brief
+         * @param character
+         * @return
+         */
+        bool notEquals(const ACCharacter &character) const ;
+
     private:
         i32_t _data[2];
     };
@@ -94,6 +161,8 @@ namespace acloong {
         ACString &prepend(const ACString &str);
         ACString &prepend(const char *str);
         ACString &prepend(const std::string &str);
+
+
 
     private:
         ACEncode _encode = ascii;
