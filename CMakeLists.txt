@@ -3,7 +3,7 @@ project(acloong)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES src/main.cpp src/core/base.h src/core/ACString.cpp src/core/ACString.h)
+set(SOURCE_FILES src/main.cpp src/core/base.h src/core/acstring.cpp src/core/acstring.h)
 
 include_directories(src/core)
 
