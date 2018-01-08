@@ -11,7 +11,7 @@
 #include <vector>
 #include <set>
 
-namespace acloong{
+namespace ac{
 
     using i8_t      = int8_t ;
     using i16_t     = int16_t ;

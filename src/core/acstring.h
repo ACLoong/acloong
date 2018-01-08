@@ -10,7 +10,7 @@
 #include <cstdio>
 #include <string>
 
-namespace acloong {
+namespace ac {
 
     /**
      * @brief ACCharacter provides a character unit, it stores an utf16 character with 16 bit.
@@ -44,7 +44,7 @@ namespace acloong {
          * @brief get the value in which store-unit
          * @return the value of which store-unit in value-passed not in reference-passed
          */
-        char operator [] ()  const ;
+        char operator [] (size_t index)  const ;
 
         /**
          * @brief

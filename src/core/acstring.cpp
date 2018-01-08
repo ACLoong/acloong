@@ -4,7 +4,7 @@
 
 #include "acstring.h"
 
-namespace acloong {
+namespace ac {
     ACCharacter::ACCharacter(char character)
     {
         //TODO

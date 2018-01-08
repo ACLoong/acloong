@@ -5,7 +5,7 @@
 #ifndef ACLOONG_ACUNCOPYABLE_HPP
 #define ACLOONG_ACUNCOPYABLE_HPP
 
-namespace acloong {
+namespace ac {
     class ACUncopyable {
 
     };
