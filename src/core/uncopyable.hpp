@@ -12,7 +12,7 @@ namespace ac {
     class Uncopyable {
     protected:
         Uncopyable () = default;
-        virtual ~ACUncopyable () = default;
+        virtual ~Uncopyable () = default;
 
         Uncopyable (const Uncopyable&) = delete;
         Uncopyable& operator= (const Uncopyable&) = delete;
