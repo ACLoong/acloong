@@ -82,7 +82,7 @@ namespace ac {
         bool notEquals(const Character &character) const ;
 
     private:
-        i32_t _data[2];
+        i8_t _data[2];
     };
 
     /**

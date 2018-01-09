@@ -20,5 +20,4 @@ namespace ac {
 }
 
 
-
 #endif //ACLOONG_UNCOPYABLE_HPP
