@@ -6,10 +6,9 @@
 #define ACLOONG_LOG_HPP
 
 namespace ac {
-
     class log {
 
     };
-
 }
+
 #endif //ACLOONG_LOG_HPP
