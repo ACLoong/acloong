@@ -42,6 +42,7 @@ namespace ac{
     using ilist_t   = std::list<int32_t > ;
     using ivec_t    = std::vector<int32_t> ;
 
+    using index_t   = int32_t ;
     using nullptr_t = decltype(nullptr) ;
 }
 
