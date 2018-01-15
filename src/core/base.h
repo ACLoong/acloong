@@ -11,7 +11,7 @@
 #include <vector>
 #include <set>
 
-namespace acloong{
+namespace ac{
 
     using i8_t      = int8_t ;
     using i16_t     = int16_t ;
@@ -36,11 +36,11 @@ namespace acloong{
 
     using sset_t    = std::set<std::string> ;
     using slist_t   = std::list<std::string> ;
-    using svector_t = std::vector<std::string> ;
+    using svec_t    = std::vector<std::string> ;
 
     using iset_t    = std::set<int32_t> ;
     using ilist_t   = std::list<int32_t > ;
-    using ivector_t = std::vector<int32_t> ;
+    using ivec_t    = std::vector<int32_t> ;
 
     using nullptr_t = decltype(nullptr) ;
 }

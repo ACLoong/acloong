@@ -34,3 +34,6 @@
 # Idea local configure
 *workspace.xml
 *cmake-build-debug
+
+#os X
+*.DS_Store
