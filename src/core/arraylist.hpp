@@ -65,12 +65,22 @@ namespace ac {
         //TODO
     }
 
+    /**
+     *
+     * @tparam Tp
+     * @param rhs
+     */
     inline template <typename Tp>
     ArrayList<Tp>::ArrayList(const ArrayList &rhs)
     {
         //TODO
     }
 
+    /**
+     *
+     * @tparam Tp
+     * @param rhs
+     */
     inline template <typename Tp>
     ArrayList<Tp>::ArrayList(const ArrayList &&rhs)
     {
