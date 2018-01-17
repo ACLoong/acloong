@@ -64,9 +64,9 @@ namespace ac {
 
         ArrayList<Tp> &operator = (const ArrayList<Tp> &rhs);
 
-        size_t getLength() const;
-        size_t getCapacity() const;
-        size_t getSize() const;
+        size_t length() const;
+        size_t capacity() const;
+        size_t size() const;
 
     private:
         Tp       *_data = nullptr;

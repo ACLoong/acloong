@@ -21,7 +21,7 @@ namespace ac {
          * @return
          */
         template<typename... Args>
-        static Tp& getInstance(Args &&... args) {
+        static Tp& instance(Args &&... args) {
             static Tp _instance(std::forward<Args>(args)...);
             return _instance;
         }
