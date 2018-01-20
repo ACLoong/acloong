@@ -84,6 +84,7 @@ namespace ac {
      */
     template<typename Tp>
     LinkedList<Tp>::LinkedList(const LinkedList<Tp> &list) {
+
     }
 
     /**
@@ -113,7 +114,7 @@ namespace ac {
      */
     template<typename Tp>
     LinkedList<Tp> &LinkedList<Tp>::operator=(const LinkedList<int> &rhs) {
-        return <#initializer#>;
+        return LinkedList<Tp>();
     }
 
     /**
@@ -145,7 +146,7 @@ namespace ac {
      */
     template<typename Tp>
     LinkedList<Tp> &LinkedList<Tp>::operator+=(const LinkedList<Tp> &rhs) {
-        return <#initializer#>;
+        return LinkedList<Tp>();
     }
 }
 
