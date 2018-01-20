@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(acloong)
+project(test)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -8,4 +8,4 @@ set(SOURCE_FILES src/main.cpp src/core/base.h src/core/string.cpp src/core/strin
 
 include_directories(src/)
 
-add_executable(acloong ${SOURCE_FILES})
+add_executable(test ${SOURCE_FILES})
