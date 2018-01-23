@@ -5,9 +5,72 @@
 #ifndef ACLOONG_LOG_HPP
 #define ACLOONG_LOG_HPP
 
-namespace ac {
-    class log {
+#include "utility/singleton.hpp"
 
+#include <string>
+#include <functional>
+
+namespace ac {
+
+    enum Level {
+        Trace,
+        Debug,
+        Info,
+        Warn,
+        Error,
+        Fatal,
+    };
+
+    class LogContext {
+
+    };
+
+    class Log {
+    public:
+        const static std::string levelStr[] = {
+                "Trace",
+                "Debug",
+                "Info",
+                "Warn",
+                "Error",
+                "Fatal",
+        };
+
+        using FormatFuncType = std::string (Level,
+                                            const std::string &,
+                                            const std::string &,
+                                            int,
+                                            const std::string &,
+                                            const std::string &,
+                                            const std::string &);
+
+        Log(Level level,
+            const std::string &file,
+            const std::string &func,
+            int                line,
+            const std::string &proc,
+            const std::string &thread,
+            const std::string &timestamp
+        );
+
+        virtual ~Log();
+
+        Log &operator << (const std::string &message);
+        Log &operator << (int number);
+        Log &operator << (double number);
+
+    private:
+        std::string                     _buffer;
+        Level                           _currLevel;
+        std::string                     _file;
+        std::string                     _func;
+        int                             _line;
+        std::string                     _procStr;
+        std::string                     _threadStr;
+
+        std::string                     _timestampStr;
+
+        std::function<FormatFuncType>   _formatPrint;
     };
 }
 
