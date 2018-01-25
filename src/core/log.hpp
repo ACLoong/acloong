@@ -6,9 +6,11 @@
 #define ACLOONG_LOG_HPP
 
 #include "utility/singleton.hpp"
+#include "strkit.hpp"
 
 #include <string>
 #include <functional>
+#include <chrono>
 
 namespace ac {
 
@@ -28,10 +30,12 @@ namespace ac {
 #define error() MACROLOG(Error)
 #define fatal() MACROLOG(Fatal)
 
-    //TODO
 #define MACROLOG(Level) do { \
-    Log(Level, __FILE__, __func__, __LINE__, getpid(), \
-    std::this_thread::get_id(), \
+    auto t = std::chrono::system::clock::to_time_t(std::chrono::system_clock::now()); \
+    Log(Level, __FILE__, __func__, __LINE__, \
+    strkit::int2Str(getpid()), \
+    strkit::str2Int(std::this_thread::get_id()), \
+    std::put_time(std::localtime(&t), "%Y-%m-%d %X") \
     ) \
 } while(0)
 
