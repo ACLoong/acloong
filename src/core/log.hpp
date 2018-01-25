@@ -21,8 +21,21 @@ namespace ac {
         Fatal,
     };
 
-    class LogContext {
+#define trace() MACROLOG(Trace)
+#define debug() MACROLOG(Debug)
+#define info() MACROLOG(Info)
+#define warn() MACROLOG(Warn)
+#define error() MACROLOG(Error)
+#define fatal() MACROLOG(Fatal)
 
+    //TODO
+#define MACROLOG(Level) do { \
+    Log(Level, __FILE__, __func__, __LINE__, getpid(), \
+    std::this_thread::get_id(), \
+    ) \
+} while(0)
+
+    class LogContext {
     };
 
     class Log {
