@@ -1,4 +1,5 @@
-# acloong: 一个简单易用的C++库
+# acloong  [![Build Status](https://travis-ci.org/ACLoong/acloong.svg?branch=master)](https://travis-ci.org/ACLoong/acloong)  
+一个简单易用的C++库
 
 ### 介绍
 
