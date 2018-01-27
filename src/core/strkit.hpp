@@ -9,7 +9,13 @@
 #include <string>
 
 namespace ac {
-    bool isNumeral(const std::string str) {
+    class strkit {
+	public:
+		static std::string int2Str(int number);
+		static int str2Int(const std::string &str);
+	};
+
+	bool isNumeral(const std::string str) {
 		int i;
 
 		if (str[0] == '+' || str[0] == '-') {
@@ -21,21 +27,15 @@ namespace ac {
 
 		for (; i < str.length(); i++) {
 
-			if (str[i]<'0' || str[i]>'9') {
+			if (str[i] < '0' || str[i] > '9') {
 				return false;
 			}
 
 		}
 		return true;
 	}
-    
-    class strkit {
-    public:
-        static std::string int2Str(int number);
-        static int str2Int(const std::string &str);
-    };
-    
-    std::string strkit::int2Str(int number) {
+
+	std::string strkit::int2Str(int number) {
 		bool pos = true;
 		
 		if (number < 0) {
@@ -43,48 +43,49 @@ namespace ac {
 			number = 0 - number;
 		}
 
-		char temp[15],temp2[15];
+		char inter_result[15];
+		char order_result[15];
 		int length = 0;
 		while (number) {
-			temp[length] = number % 10 + '0';
+			inter_result[length] = number % 10 + '0';
 			number /= 10;
 			length++;
 		}
-		int i, j = length - 1;
+		size_t i, j = length - 1;
 
-		if (!pos) {
+		if (pos == false) {
 			i = 1;
-			temp2[0] = '-';
+			order_result[0] = '-';
 		}
 		else {
 			i = 0;
 		}
 
 		for (; i < length; i++, j--) {
-			temp2[i] = temp[j];
+			order_result[i] = inter_result[j];
 		}
 
 		if (!pos) {
-			temp2[length + 1] = '\0';
+			order_result[length + 1] = '\0';
 		}
 		else {
-			temp2[length] = '\0';
+			order_result[length] = '\0';
 		}
 
-		return temp2;
+		return order_result;
 	}
 
 	int strkit::str2Int(const std::string &str) {
-		if (!isNumeral(str)) {
+		if (isNumeral(str) == false) {
 			throw std::invalid_argument("parameters error");
 		}
 
-		int i;
+		size_t i;
 		bool pos = true;
 
 		if (str[0] == '+') {
 			i = 1;
-		}
+		}  
 		else if (str[0] == '-') {
 			i = 1;
 			pos = false;
@@ -98,7 +99,7 @@ namespace ac {
 			result = result * 10 + str[i] - '0';
 		}
 
-		if (!pos) {
+		if (pos == false) {
 			return 0 - result;
 		}
 		else {
