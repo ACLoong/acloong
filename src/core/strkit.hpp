@@ -11,65 +11,57 @@
 namespace ac {
     class strkit {
 	public:
+		static bool isNumeral(const std::string &str);
 		static std::string int2Str(int number);
 		static int str2Int(const std::string &str);
 	};
-
-	bool isNumeral(const std::string str) {
-		int i;
-
-		if (str[0] == '+' || str[0] == '-') {
-			i = 1;
+	
+	bool strkit::isNumeral(const std::string &str) {
+		if (str == "") {
+			return false;
 		}
-		else {
-			i = 0;
+		std::string::const_iterator it = str.cbegin();
+
+		if (*it == '+' || *it == '-') {
+			it++;
 		}
 
-		for (; i < str.length(); i++) {
-
-			if (str[i] < '0' || str[i] > '9') {
+		for (; it != str.cend(); it++) {
+	
+			if (*it < '0' || *it > '9') {
 				return false;
 			}
 
 		}
+
 		return true;
 	}
 
 	std::string strkit::int2Str(int number) {
+		if (number == 0) {
+			return "0";
+		}
+
 		bool pos = true;
 		
 		if (number < 0) {
 			pos = false;
 			number = 0 - number;
 		}
+		
+		std::string order_result(15, '\0');
+		std::size_t length = 0;
 
-		char inter_result[15];
-		char order_result[15];
-		int length = 0;
-		while (number) {
-			inter_result[length] = number % 10 + '0';
-			number /= 10;
-			length++;
+		char getch;
+
+		while (number != 0) {
+			getch = number % 10 + '0';
+			order_result.insert(0, 1, getch);
+			number = number / 10;
 		}
-		size_t i, j = length - 1;
 
 		if (pos == false) {
-			i = 1;
-			order_result[0] = '-';
-		}
-		else {
-			i = 0;
-		}
-
-		for (; i < length; i++, j--) {
-			order_result[i] = inter_result[j];
-		}
-
-		if (!pos) {
-			order_result[length + 1] = '\0';
-		}
-		else {
-			order_result[length] = '\0';
+			order_result.insert(0, 1, '+');
 		}
 
 		return order_result;
@@ -77,35 +69,32 @@ namespace ac {
 
 	int strkit::str2Int(const std::string &str) {
 		if (isNumeral(str) == false) {
-			throw std::invalid_argument("parameters error");
-		}
-
-		size_t i;
-		bool pos = true;
-
-		if (str[0] == '+') {
-			i = 1;
-		}  
-		else if (str[0] == '-') {
-			i = 1;
-			pos = false;
+			throw std::invalid_argument("argument error");
 		}
 		else {
-			i = 0;
-		}
+			bool pos = true;
+			int result = 0;
+			std::string::const_iterator it = str.cbegin();
 
-		int result = 0;
-		for (; i < str.length(); i++) {
-			result = result * 10 + str[i] - '0';
-		}
+			if (*it == '+' || *it == '-') {
 
-		if (pos == false) {
-			return 0 - result;
-		}
-		else {
-			return result;
-		}
+				pos = false;
+				it++;
+			}
+
+			for (; it != str.cend(); it++) {
+				result = result * 10 + *it - '0';
+			}
+
+			if (pos == false) {
+				return -result;
+			}
+			else {
+				return result;
+			}
+		}	
 	}
+
 }
 
 #endif //ACLOONG_STRKIT_HPP
