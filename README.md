@@ -1,11 +1,11 @@
 # acloong  [![Build Status](https://travis-ci.org/ACLoong/acloong.svg?branch=master)](https://travis-ci.org/ACLoong/acloong)  
-一个简单易用的C++库
+An easy to use library in Modern C++
 
 ### 介绍
 
-1. acloong是一款采用c++标准实现的一个公共组件库。
+1. `acloong` is an easy to use common components library which is written in modern standard C++.
 
-2. acloong所有代码基于C++11标准，不依赖任何第三方库。
+2. All of the `acloong` codes acloong based on C++11 right now，and it does not depends on any thirdparty library.
 
 3. 项目结构  
     acloong   
@@ -37,17 +37,17 @@
 4. 需要使用哪个功能，只需要将该功能头文件添加即可，而不是全部文件；
 5. 由于采用标准C++语法，因此与平台无关。
 
-###  参与方式  
+###  How to contribute
 
-1. `fork`本项目；
-2. `clone`本项目到你的本地机器；
-3. 在你的本地修改或增加本项目内容；
-4. 同步到你的git；
-5. 发送`Pull Requests`给我；
-6. `review`通过或返回修改。
+1. `fork` this repository into your user account.
+2. `clone` your repository to your local.
+3. coding.
+4. `push` your local changes to remote.
+5. Request a `Pull Requests` to this repository.
+6. `review` and merge.
 
 
-###  联系作者  
+###  About author
 
-作者：Kingchin Wong  
-联系邮箱：kingchin1218@126.com
+name: Jovan Wong
+email：kingchin1218@126.com
