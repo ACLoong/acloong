@@ -1,7 +1,3 @@
-//
-// Created by WangQing on 03/01/2018.
-//
-
 #ifndef ACLOONG_BASE_H
 #define ACLOONG_BASE_H
 

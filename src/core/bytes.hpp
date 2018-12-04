@@ -5,7 +5,7 @@
 #ifndef ACLOONG_BYTES_HPP
 #define ACLOONG_BYTES_HPP
 
-#include "core/base.h"
+#include "core/types.hpp"
 
 namespace ac {
     class Bytes {

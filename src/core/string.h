@@ -5,7 +5,7 @@
 #ifndef ACLOONG_STRING_H
 #define ACLOONG_STRING_H
 
-#include "base.h"
+#include "types.hpp"
 
 #include <cstdio>
 #include <string>

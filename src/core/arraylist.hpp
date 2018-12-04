@@ -5,7 +5,7 @@
 #ifndef ACLOONG_ARRAYLIST_HPP
 #define ACLOONG_ARRAYLIST_HPP
 
-#include "core/base.h"
+#include "core/types.hpp"
 
 #include <stdio.h>
 

@@ -5,7 +5,7 @@
 #ifndef ACLOONG_BYTE_HPP
 #define ACLOONG_BYTE_HPP
 
-#include "base.h"
+#include "types.hpp"
 
 #include <ostream>
 
