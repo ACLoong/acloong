@@ -5,9 +5,9 @@ An easy to use library in Modern C++
 
 1. `acloong` is an easy to use common components library which is written in modern standard C++.
 
-2. All of the `acloong` codes acloong based on C++11 right now，and it does not depends on any thirdparty library.
+2. All of the `acloong` codes based on C++11 right now，and it does not depends on any thirdparty library.
 
-3. 项目结构  
+3. Structure
     acloong   
         |---README.md  
         |---doc  
@@ -15,27 +15,47 @@ An easy to use library in Modern C++
         |---sample     
         |---test    
 
-4. 待实现的内容
-    1. 字符串操作工具集：该工具集封装对std::string、const char *的一些操作，如子串、字符串分割（支持正则）、拼接、格式输出等。
-    2. ACString组件：二进制兼容的字符串(byte)。
-    3. ACMath组件：提供丰富的数学计算，如矩阵计算、幂运算、大数等。
-    4. 时间日期组件：主要封装std的时间和日期组件，提供统一且易用的接口。
-    5. xml、json、protobuf解析组件：主要对json解析提供易用的接口。
-    6. 随机数操作类：不仅支持基本的随机数操作、还支持丰富的随机数样式。
-    7. 容器组件：提供基础数据结构容器，包括arraylist、linkedlist、map、set、hash、byte、heap等。
-    8. utility组件：提供丰富的工具函数，如命令行参数组件等。
-    9. conf组件：提供一个kv配置文件组件。
-    10. 设计模式组件：提供一系列常用的设计模式组件。
-    11. io组件：包含console、file system、log等。
-    12. serialization组件：极简的序列化组件。
+4. Road Map
+    1. os tool module:
+        a. command line arguments tool
+        b. process management tool
+        c. date and time tool
+        d. file and folder system
+   
+    2. io module
+        a. console
+        b. file operate
+        c. log
 
-### 特性  
+    3. container module
+        a. list, linkedlist and arraylist
+        b. map, hashmap and sortedmap, dict: we should resolve the issue that take too much cost when rehash a big table.
+        c. queue
+        d. stack
+        e. hash set and sortedset
+        f. bitmap
 
-1. 项目全部采用标准C++语法；
-2. 支持C++11标准；
-3. 所有功能均以头文件或直接源码方式提供，只需包含文件即可使用；
-4. 需要使用哪个功能，只需要将该功能头文件添加即可，而不是全部文件；
-5. 由于采用标准C++语法，因此与平台无关。
+    4. mathematically
+        a. math compute
+        b. random
+        c. matrix
+
+    5. text
+        a. text
+        b. byte
+        c. bytes
+        d. decode and encode
+        e. json
+        f. serializer
+
+     6. utility
+        a. strkit and format
+        b. conf
+        c. design patterns
+
+
+### What's New
+None
 
 ###  How to contribute
 
@@ -48,6 +68,5 @@ An easy to use library in Modern C++
 
 
 ###  About author
-
-name: Jovan Wong
+name: Jovan Wong   
 email：kingchin1218@126.com
