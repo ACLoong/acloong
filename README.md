@@ -1,11 +1,11 @@
 # acloong  [![Build Status](https://travis-ci.org/ACLoong/acloong.svg?branch=master)](https://travis-ci.org/ACLoong/acloong)  
-An easy to use library in Modern C++
+An easy-to-use library in Modern C++
 
-### 介绍
+### Introduction
 
-1. `acloong` is an easy to use common components library which is written in modern standard C++.
+1. `acloong` is an easy-to-use common component library which is written in modern standard C++.
 
-2. All of the `acloong` codes based on C++11 right now，and it does not depends on any thirdparty library.
+2. All of the `acloong` codes are based on C++11 right now，and they do not depend on any third party's libraries.
 
 3. Structure
     acloong   
@@ -16,7 +16,7 @@ An easy to use library in Modern C++
         |---test    
 
 4. Road Map
-    1. os tool module:
+    1. os tool module
         a. command line arguments tool
         b. process management tool
         c. date and time tool
@@ -24,12 +24,12 @@ An easy to use library in Modern C++
    
     2. io module
         a. console
-        b. file operate
+        b. file operation
         c. log
 
     3. container module
         a. list, linkedlist and arraylist
-        b. map, hashmap and sortedmap, dict: we should resolve the issue that take too much cost when rehash a big table.
+        b. map, hashmap and sortedmap, dict: we should resolve the issue that takes too much cost when rehashing a big table.
         c. queue
         d. stack
         e. hash set and sortedset
@@ -59,10 +59,10 @@ None
 
 ###  How to contribute
 
-1. `fork` this repository into your user account.
-2. `clone` your repository to your local.
+1. `fork` this repository into your own Github account.
+2. `clone` your repository to your local machine.
 3. coding.
-4. `push` your local changes to remote.
+4. `push` your local changes to remote repository.
 5. Request a `Pull Requests` to this repository.
 6. `review` and merge.
 
