@@ -1,9 +1,9 @@
 # acloong  [![Build Status](https://travis-ci.org/ACLoong/acloong.svg?branch=master)](https://travis-ci.org/ACLoong/acloong)  
-An eassy about how to use library in Modern C++
+An easy-to-use library in Modern C++
 
-### Introduce
+### Introduction
 
-1. `acloong` is an eassy which uses common components libraries written in modern standard C++.
+1. `acloong` is an easy-to-use common component library which is written in modern standard C++.
 
 2. All of the `acloong` codes are based on C++11 right now，and they do not depend on any third party's libraries.
 
@@ -59,8 +59,8 @@ None
 
 ###  How to contribute
 
-1. `fork` this repository into your user account.
-2. `clone` your repository to your local system.
+1. `fork` this repository into your own Github account.
+2. `clone` your repository to your local machine.
 3. coding.
 4. `push` your local changes to remote repository.
 5. Request a `Pull Requests` to this repository.
