@@ -1,7 +1,3 @@
-//
-// Created by WangQing on 15/01/2018.
-//
-
 #ifndef ACLOONG_SINGLETON_HPP
 #define ACLOONG_SINGLETON_HPP
 
@@ -9,7 +5,7 @@
 
 namespace ac {
 /**
- * @brief
+ * @brief  Singleton template class
  */
     template<typename Tp>
     class Singleton {
@@ -27,9 +23,13 @@ namespace ac {
         }
 
     private:
+        //private constructor
         Singleton() = default;
+        //private destructor
         virtual ~Singleton() = default;
+        //private copy constructor,Guaranteed not to be copyed
         Singleton (const Singleton &) = default;
+        //private assignment function,Guaranteed not to be assigned
         Singleton operator= (const Singleton &) = default;
     };
 }
