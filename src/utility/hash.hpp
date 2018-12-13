@@ -1,5 +1,5 @@
-#ifndef TEST_HASH_HPP
-#define TEST_HASH_HPP
+#ifndef ACLOONG_HASH_APP
+#define ACLOONG_HASH_APP
 
 #include <functional>
 
@@ -42,4 +42,4 @@ inline std::size_t hash_value(const Types&... args) {
 
 } // namespace ac
 
-#endif //TEST_HASH_HPP
+#endif //ACLOONG_HASH_APP
