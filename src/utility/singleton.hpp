@@ -23,7 +23,7 @@ namespace ac {
         }
 
     private:
-    	//private constructor
+        //private constructor
         Singleton() = default;
         //private destructor
         virtual ~Singleton() = default;
