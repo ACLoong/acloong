@@ -1,7 +1,3 @@
-//
-// Created by WangQing on 2018/1/6.
-//
-
 #ifndef ACLOONG_UNCOPYABLE_HPP
 #define ACLOONG_UNCOPYABLE_HPP
 
