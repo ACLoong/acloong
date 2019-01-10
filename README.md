@@ -11,9 +11,9 @@ An easy to use library in Modern C++
     acloong   
         |---README.md  
         |---doc  
-        |---src        
-        |---sample     
-        |---test    
+        |---src  
+        |---sample  
+        |---test  
 
 4. Road Map  
     1. os tool module:  
@@ -68,3 +68,6 @@ None
 ###  About author
 name: Jovan Wong   
 email：kingchin1218@126.com
+
+name: Tina   
+email：tinaqian@126.com
