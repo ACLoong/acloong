@@ -13,7 +13,7 @@ An easy to use library in Modern C++
         |---doc  
         |---src  
         |---sample  
-        |---test  
+        |---test
 
 4. Road Map  
     1. os tool module:  
