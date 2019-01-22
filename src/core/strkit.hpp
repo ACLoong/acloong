@@ -7,6 +7,7 @@
 #define ACLOONG_STRKIT_HPP
 
 #include <string>
+#include <sstream>
 
 namespace ac {
     class strkit {
@@ -14,6 +15,8 @@ namespace ac {
 		static bool isNumeral(const std::string &str);
 		static std::string int2Str(int number);
 		static int str2Int(const std::string &str);
+        template <class InputIt, class T>
+        static std::string join(InputIt first, InputIt last, T s);
 	};
 	
 	bool strkit::isNumeral(const std::string &str) {
@@ -94,6 +97,21 @@ namespace ac {
 			}
 		}	
 	}
+
+    template <class InputIt, class T>
+    std::string strkit::join(InputIt first, InputIt last, T s)
+    {
+        if (first == last) {
+            return {};
+        }
+        std::ostringstream stream;
+        stream << *first;
+        for(auto iter = first + 1; iter != last; ++iter) {
+            stream << *s;
+            stream << *iter;
+        }
+        return stream.str();
+    }
 
 }
 
